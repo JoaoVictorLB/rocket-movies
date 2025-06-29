@@ -1,23 +1,25 @@
 import { Container, StarButton } from './styles';
 import { IoStarOutline, IoStar } from 'react-icons/io5';
 
-export function RatingStars({ home = false }) {
+export function RatingStars({ home = false, rating = 0 }) {
+    const ratingRest = 5 - rating;
+    
     return(
         <Container $home={home}>
             <StarButton $home={home}>
-                <IoStar size={home ? 15 : 20} />
+                {rating >= 1 ? <IoStar size={home ? 15 : 20} /> : <IoStarOutline size={home ? 15 : 20} /> }
             </StarButton>
             <StarButton $home={home}>
-                <IoStar size={home ? 15 : 20} />
+                {rating >= 2 ? <IoStar size={home ? 15 : 20} /> : <IoStarOutline size={home ? 15 : 20} /> }
             </StarButton>
             <StarButton $home={home}>
-                <IoStar size={home ? 15 : 20} />
+                {rating >= 3 ? <IoStar size={home ? 15 : 20} /> : <IoStarOutline size={home ? 15 : 20} /> }
             </StarButton>
             <StarButton $home={home}>
-                <IoStar size={home ? 15 : 20} />
+                {rating >= 4 ? <IoStar size={home ? 15 : 20} /> : <IoStarOutline size={home ? 15 : 20} /> }
             </StarButton>
             <StarButton $home={home}>
-                <IoStarOutline size={home ? 15 : 20} />
+                {rating == 5 ? <IoStar size={home ? 15 : 20} /> : <IoStarOutline size={home ? 15 : 20} /> }
             </StarButton>
         </Container>
     );

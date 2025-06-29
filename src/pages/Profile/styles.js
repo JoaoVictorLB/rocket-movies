@@ -13,11 +13,16 @@ export const Container = styled.div`
         align-items: center;
         padding: 0 124px;
 
-        a {
+        button {
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
+
+            background: none;
+            border: none;
+
+            cursor: pointer;
         }
 
         p, 

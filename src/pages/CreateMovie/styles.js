@@ -15,6 +15,8 @@ export const Container = styled.div`
 
     .tags {
         display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
         
         background-color: ${({ theme }) => theme.COLORS.BACKGROUND_PURPLE};
 

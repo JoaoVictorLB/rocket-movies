@@ -12,15 +12,19 @@ export const Container = styled.div`
     > div {
         width: 200px;
         text-align: end;
-    }
 
-    > div h3 {
-        color: ${({ theme }) => theme.COLORS.WHITE};
-        width: 100%;
-    }
+        h3 {
+            color: ${({ theme }) => theme.COLORS.WHITE};
+            width: 100%;
+        }
 
-    > div a {
-        color: ${({ theme }) => theme.COLORS.FONT_GRAY};
+        button {
+            background: none;
+            border: none;
+            color: ${({ theme }) => theme.COLORS.FONT_GRAY};
+
+            cursor: pointer;
+        }
     }
 
     > a > img {
